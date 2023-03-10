@@ -78,7 +78,7 @@ source_socket="$(dirname "${unixSocketFile}")/$(basename "${unixSocketFile}").or
 # Move socket files
 mv "${unixSocketFile}" "${source_socket}"
 
-
+# Handle Ctrl-C
 trap "_exit" SIGINT
 
 # Setup pipe over TCP that we can tap into
